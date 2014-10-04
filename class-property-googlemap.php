@@ -29,6 +29,14 @@ class PropertyGoogleMap extends Papi_Property {
         width: 100%;
         height: 400px;
       }
+      
+      .papi-property-map-search {
+	      font-size: 16px;
+	      font-weight: 300;
+	      line-height: 1.5;
+	      width: 100% !important;
+	      margin: 5px 0;
+      }
     </style>
     <div id="<?php echo $options->slug; ?>" class="map-canvas"></div>
   <?php
