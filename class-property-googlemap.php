@@ -22,7 +22,9 @@ class PropertyGoogleMap extends Papi_Property {
   public function html() {
     // Property options.
     $options = $this->get_options();
-
+    
+    // Render the input field
+    $this->input();
     ?>
     <style type="text/css">
       .map-canvas {
@@ -191,30 +193,4 @@ class PropertyGoogleMap extends Papi_Property {
            value="<?php echo $value['lng']; ?>"/>
   <?php
   }
-
-  /**
-   * Render the final html that is displayed in the table.
-   *
-   * @since 1.0.0
-   */
-
-  public function render() {
-    ?>
-    <tr>
-      <td>
-        <?php
-        $this->label();
-        $this->instruction();
-        ?>
-      </td>
-      <td>
-        <?php
-        $this->input();
-        $this->html();
-        ?>
-      </td>
-    </tr>
-  <?php
-  }
-
 }
